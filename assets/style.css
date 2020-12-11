@@ -8,51 +8,88 @@ body {
     background-color: #cfc1c1;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    display: flex;
-    flex-direction: column;
- 
 }
 
+/* HEADER STARTS */
 header {
-display: flex;
+padding: 0px;
 justify-content: space-between;
-background-color: #777272;
+background-color: white;
 align-items: center;
-padding: 30px 30px:
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
+.logo {
+    height:50px;
+    width: 125px;
+    margin-right: auto
 }
-
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 
 li, a, button {
     font-family: sans-serif;
     font-weight: 500px;
     font-size: 16px;
-    color: black;
+    color: white;
     text-decoration: none;
     display: inline-block;
+    padding: 10px;
 }
 
 button {
-    padding: 9px 25px;
-    background-color: green;
+    padding: 9px 50px;
+    background-color: black;
     border: none;
     border-radius: 50px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: green;
+    background-color: red;
 }
+/* HEADER ENDS */
+
+.title p {
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: red;
+    /* need to add header image here */
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+/* ABOUT ME */
+.about-me {
+    text-align: center;
+    margin: 25px 50px 75px;
+}
+
+.about-me h2 {
+    text-align: center;
+}
+
+/* MY WORK */
+.my-work {
+    text-align: center;
+    margin: 25px 50px 75px;
+}
+
+.my-work h2 {
+    text-align: center
+}
+
+/* CONTACT ME */
+.contact-me {
+    text-align: center;
+    margin: 25px 50px 75px;
+}
+
+.contact-me h2 {
+    text-align: center;
+}
+
 
 
 
