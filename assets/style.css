@@ -38,7 +38,7 @@ button {
     padding: 9px 50px;
     background-color: black;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -70,10 +70,16 @@ button:hover {
     text-align: center;
 }
 
+
 /* MY WORK */
 .my-work {
     text-align: center;
     margin: 25px 50px 75px;
+}
+
+.my-work img {
+    height: 300px;
+    width: 400px;
 }
 
 .my-work h2 {
