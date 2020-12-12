@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -8,12 +8,24 @@ body {
     background-color: #cfc1c1;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 /* HEADER STARTS */
 header {
 background-color: white;
 align-items: center;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-position: 80%;
+flex-wrap: wrap;
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+z-index: 9999;
 }
 
 .logo {
@@ -77,7 +89,7 @@ button:hover {
 
 /* MAIN */
 main {
-    background-color: rgb(210, 210, 230);
+    background-color: #cfc1c1;
     grid-area: main;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -86,17 +98,23 @@ main {
 main p {
     text-align: center;
     max-width: 100%;
-    padding: 10px 10px 10px 10px;
+    padding: 20px 10px 10px 10px;
 }
 
 /* SIDEBAR 1 */
 #sidebar {
-    background-color: rgb(108, 167, 189);
+    background-color: #cfc1c1;
     grid-area: sidebar;
     grid-row-start: 1;
     grid-row-end: 2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+}
+
+#sidebar h2 {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 #sidebar h2 {
@@ -107,7 +125,7 @@ main p {
 
 /* SIDEBAR 2 */
 #sidebar2 {
-    background-color: rgb(108, 167, 189);
+    background-color: #cfc1c1;
     grid-area: sidebar2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -117,11 +135,14 @@ main p {
     font-size: 50px;
     text-align: center;
     padding: 150px 20px;
+    animation-name: fade;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
 }
 
 /*CONTENT 1 */
 #content1 {
-    background-color: grey;
+    background-color: lightblue;
     grid-area: content1;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -132,13 +153,21 @@ main p {
     max-width: 250px;
 }
 
-#content1:hover {
-    width: 101%;
+
+#content1 img:hover {
+    animation-name: move-img;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
+
+#content1 p {
+    padding: 10px;
+}
+
 
 /* CONTENT 2 */
 #content2 {
-    background: grey;
+    background: lightblue;
     grid-area: content2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -149,10 +178,20 @@ main p {
     max-width: 250px;
 }
 
+#content2 img:hover {
+    animation-name: move-img;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#content2 p {
+    padding: 10px;
+}
+
 
 /* CONTENT 3 */
 #content3 {
-    background-color: grey;
+    background-color: lightblue;
     grid-area: content3;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -163,6 +202,16 @@ main p {
     max-width: 250px;
 }
 
+#content3 img:hover {
+    animation-name: move-img;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#content3 p {
+    padding: 10px;
+}
+
 /* CONTENT 4 */
 #content4 {
     background-color: lightblue;
@@ -171,11 +220,43 @@ main p {
     padding-top: var(--main-padding);
 }
 
+#content4 h2 {
+    font-size: 50px;
+    animation-name: fade;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+#content4 ul li a {
+    font-size: 20px;
+    color:black;
+}
+
+#content4 ul li a:hover {
+    animation-name: text-contact;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 /* CSS GRID ENDS */
 
-/* SCREEN RESIZING */
-@media only screen and (max-width: 375px) {
-    /* NEED TO FIX */
+/* KEYFRAMES */
+@keyframes move-img {
+    from {max-width: 200px; max-height: 250px;}
+    to {transform: translate(5px, 10px)}
+}
+
+@keyframes fade {
+    from {opacity: 0.0}
+    to {opacity: 1}
+}
+
+@keyframes text-contact {
+    from {font-size:20px;}
+    to {font-size: 25px;}
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 980px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 0.4fr 2,2fr 1.2fr 1.2fr 1fr;
@@ -187,13 +268,50 @@ main p {
         "content2"
         "content3"
         "content4";
-        
-       
     }
 
-    
+    .header {
+        width:100%;
+    }
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2,2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+        "sidebar"
+        "main"
+        "sidebar2"
+        "content1"
+        "content2"
+        "content3"
+        "content4";
+    }
+
+    .header {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2,2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+        "sidebar"
+        "main"
+        "sidebar2"
+        "content1"
+        "content2"
+        "content3"
+        "content4";
+    }
+
+    .header {
+        width:100%;
+    }
+}
 
 
 
