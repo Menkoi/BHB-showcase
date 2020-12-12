@@ -2,10 +2,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #cfc1c1;
+    background-color: lightblue;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     animation-name: fade;
@@ -30,7 +31,7 @@ z-index: 9999;
 
 .logo {
     height:50px;
-    width: 125px;
+    width: 70%;
     margin-right: auto;
 }
 
@@ -89,7 +90,7 @@ button:hover {
 
 /* MAIN */
 main {
-    background-color: #cfc1c1;
+    background-color: #a1cfe2;
     grid-area: main;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -103,7 +104,7 @@ main p {
 
 /* SIDEBAR 1 */
 #sidebar {
-    background-color: #cfc1c1;
+    background-color: lightblue;
     grid-area: sidebar;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -125,7 +126,7 @@ main p {
 
 /* SIDEBAR 2 */
 #sidebar2 {
-    background-color: #cfc1c1;
+    background-color: lightblue;
     grid-area: sidebar2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -142,7 +143,7 @@ main p {
 
 /*CONTENT 1 */
 #content1 {
-    background-color: lightblue;
+    background-color: #a1cfe2;
     grid-area: content1;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -167,7 +168,7 @@ main p {
 
 /* CONTENT 2 */
 #content2 {
-    background: lightblue;
+    background: #a1cfe2;
     grid-area: content2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -191,7 +192,7 @@ main p {
 
 /* CONTENT 3 */
 #content3 {
-    background-color: lightblue;
+    background-color: #a1cfe2;
     grid-area: content3;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
@@ -214,7 +215,7 @@ main p {
 
 /* CONTENT 4 */
 #content4 {
-    background-color: lightblue;
+    background-color: #a1cfe2;
     grid-area: content4;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
