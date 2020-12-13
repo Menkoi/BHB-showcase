@@ -10,6 +10,10 @@ I built this website from the ground up to show my abilites and knowledge of jus
 Visual Studio
 Git Bash
 
+## Instructions
+To view the website click the link!
+https://menkoi.github.io/BHB-showcase/
+
 
 
 
