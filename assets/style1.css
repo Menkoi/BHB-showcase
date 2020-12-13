@@ -115,7 +115,8 @@ button:hover {
 #content3 p {
     max-height: 100%;
     max-width: 100%;
-    text-align: center
+    text-align: center;
+    float: center;
 }
 
 #content3 img {
