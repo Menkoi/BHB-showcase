@@ -7,6 +7,7 @@ I built this website from the ground up to show my abilites and knowledge of jus
  
 ## Screenshots
 Main home screen
+<img src="https://i.imgur.com/N9Q9ON2.png"/></a>
 
 ## Tech/framework used
 Visual Studio
