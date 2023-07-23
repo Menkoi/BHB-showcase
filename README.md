@@ -17,14 +17,6 @@ Git Bash
 To view the website click this link below
 https://menkoi.github.io/BHB-showcase/
 
- ## Questions? Contact me
-
-  - Menkoi
-
-  - https://github.com/Menkoi
-
-  - celaeon@gmail.com
-
 
 
 
